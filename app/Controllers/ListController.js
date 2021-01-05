@@ -15,6 +15,8 @@ function _draw() {
 export default class ListController {
   constructor() {
     console.log("List controller created")
+    ProxyState.on('lists', _draw)
+    ProxyState.on('items', _draw)
     _draw();
   }
 
@@ -31,8 +33,7 @@ export default class ListController {
     _draw()
   }
   deleteList(id) {
-    ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
-    ProxyState.items = ProxyState.items.filter(i => i.listId != id)
+    listService.deleteList(id)
   }
 
 }

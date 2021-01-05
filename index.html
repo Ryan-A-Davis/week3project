@@ -15,7 +15,7 @@
   <header class="conatainer-fluid text-center">
     <h1>TaskMaster</h1>
   </header>
-  <main>
+  <main class="container-fluid">
     <form class="row justify-content-left" onsubmit="app.listController.createList(event)">
       <div class="col">
         <input type="text" name="title" placeholder="Name Your List..." required>
@@ -32,22 +32,7 @@
         <button type="submit">Create List</button>
       </div>
     </form>
-    <div class="row" id="lists">
-      <div class="col-4 card">
-        <div class="card-header bg-success text-center">
-          <h2>${this.title}</h2>
-        </div>
-        <div class="card-body">
-          <p>List Items go here</p>
-        </div>
-        <div class="card-footer">
-          <form onsubmit="app.itemController.addItem()">
-            <input type="text" name='item' placeholder="Gimme sommit tah dew">
-            <button type='submit' class='bg-primary'>Add Item</button>
-          </form>
-        </div>
-      </div>
-    </div>
+    <div class="row" id="lists"></div>
 
 
   </main>

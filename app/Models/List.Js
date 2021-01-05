@@ -15,16 +15,16 @@ export default class List {
         </div>
         <div class="card-body">
           <p class ="card-text" >TO DO'S:</p>
-          <div class = "row">
-          ${this.Items}
+          <div class = "d-flex flex-column">${this.Items}</div>
+          
         </div>
         <div class="card-footer">
-          <form onsubmit="app.itemController.addItem(${this.id})">
+          <form onsubmit="app.itemController.addItem('${this.id}')">
             <input type="text" name='item' placeholder="Give me sommit tah dewwww">
-            <button type='submit' class='bg-primary'>Add Item</button>
+            <button class='bg-primary'>Add Item</button>
           </form>
         </div>
-      </div>
+    </div>
     `
   }
 

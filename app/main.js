@@ -1,5 +1,6 @@
-import ListController from "./Controllers/ListController.js";
+import ListController from "./Controllers/ListController.js"
 import ItemController from "./Controllers/ItemController.js"
+import { loadState } from "./Utils/LocalStorage.js"
 
 
 class App {
@@ -9,3 +10,4 @@ class App {
 }
 
 window["app"] = new App();
+loadState()

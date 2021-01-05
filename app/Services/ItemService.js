@@ -9,6 +9,9 @@ class ItemService {
     items.push(newItem)
     ProxyState.items = items
   }
+  deleteItem(itemId) {
+    ProxyState.items = ProxyState.items.filter(i => i.id != itemId)
+  }
 
 }
 

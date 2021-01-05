@@ -6,15 +6,22 @@ export default class ItemController {
   }
 
   addItem(listId) {
-    window.event.preventDefault()
 
+    window.event.preventDefault()
     let newItem = window.event.target
 
     let itemData = {
-      title: newItem.title.value,
+      title: newItem.item.value,
       listId: listId
     }
+    console.log(itemData)
     itemService.addItem(itemData)
+
+
+  }
+
+  deleteItem(itemId) {
+    itemService.deleteItem(itemId)
 
   }
 }
