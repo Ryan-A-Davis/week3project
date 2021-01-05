@@ -32,8 +32,14 @@ export default class ListController {
     formData.reset()
     _draw()
   }
+  incrementCount() {
+  }
   deleteList(id) {
     listService.deleteList(id)
+  }
+
+  increaseCount(listId) {
+    listService.increaseCount(listId)
   }
 
 }

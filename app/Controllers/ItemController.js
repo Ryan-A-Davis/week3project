@@ -1,5 +1,6 @@
 import { itemService } from "../Services/ItemService.js"
 
+
 export default class ItemController {
   constructor() {
     console.log("item controller")
@@ -11,12 +12,12 @@ export default class ItemController {
     let newItem = window.event.target
 
     let itemData = {
+      // @ts-ignore
       title: newItem.item.value,
       listId: listId
     }
     console.log(itemData)
     itemService.addItem(itemData)
-
 
   }
 

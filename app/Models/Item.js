@@ -10,9 +10,10 @@ export default class Item {
   get Template() {
     return `
       <div class = "col-6">
-      <h4>${this.title} 
-      <button class ="btn btn-danger" onclick = "app.itemController.deleteItem('${this.id}')">Delete Item</button>
-      </h4>
+        <div class ="d-inline">
+        <h4>${this.title}</h4>
+        <button class ="btn btn-danger" onclick = "app.itemController.deleteItem('${this.id}')">Delete Item</button>
+        </div>
       </div>
     `
   }

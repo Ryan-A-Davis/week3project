@@ -19,6 +19,9 @@ class ListService {
     ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
     ProxyState.items = ProxyState.items.filter(i => i.listId != id)
   }
+  increaseCount(id) {
+
+  }
 
 }
 
